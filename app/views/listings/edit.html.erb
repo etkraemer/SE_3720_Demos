@@ -1,0 +1,12 @@
+<h1>Edit Listing</h1>
+
+<%= bootstrap_form_with model: @listing, url: listing_path(@listing), method: :patch, data: { turbo: false } do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_area :description %>
+  <%= form.check_box :available %>
+<% end %>
+
+<p>
+  <%= link_to 'Back', listing_path(@listing), class: 'btn btn-outline-secondary' %>
+</p>
+
